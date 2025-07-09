@@ -1,5 +1,5 @@
 // Sua chave de API pessoal do TMDb (substitua pela sua)
-const apiKey = "adf1edea50a0a141b962b6ae2904c70e";
+const apiKey = "chave_api";
 
 // Função principal chamada quando o botão "Buscar" é clicado
 async function buscarFilme() {
