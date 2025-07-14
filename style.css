@@ -1,15 +1,37 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  padding: 20px;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Estilo do header */
+header {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Container principal */
 .container {
   max-width: 700px;
   margin: auto;
   text-align: center;
 }
 
+/* Restante do seu CSS já existente */
 input, button {
   padding: 10px;
   margin: 10px 5px;
@@ -26,6 +48,7 @@ button {
   border: none;
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
@@ -36,20 +59,62 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
-  gap: 15px;
+  margin-top: 30px;
+  gap: 20px;
 }
 
 .card {
-  background: #fff;
-  width: 180px;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #ffffff;
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
   text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
   width: 100%;
-  border-radius: 6px;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
 }
+
+.card h3 {
+  font-size: 1.1rem;
+  margin: 10px 10px 5px;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Estilo do footer */
+footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+/* Espaçamento para não ficar atrás do footer */
+body {
+  padding-bottom: 60px; /* pelo menos a altura do footer */
+}
+
+

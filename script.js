@@ -1,5 +1,13 @@
 // Sua chave de API pessoal do TMDb (substitua pela sua)
-const apiKey = "chave_api";
+const apiKey = "adf1edea50a0a141b962b6ae2904c70e";
+
+function formatarData(dataISO) {
+  if (!dataISO) return "Data desconhecida";
+  
+  const [ano, mes, dia] = dataISO.split("-");
+  return `${dia}/${mes}/${ano}`;
+}
+
 
 // Função principal chamada quando o botão "Buscar" é clicado
 async function buscarFilme() {
@@ -49,7 +57,7 @@ async function buscarFilme() {
       card.innerHTML = `
         <img src="${imagem}" alt="Poster do filme">
         <h3>${filme.title}</h3>
-        <p>Lançamento: ${filme.release_date || "N/A"}</p>
+        <p>Lançamento: 📅 ${formatarData(filme.release_date)}</p>
       `;
 
       // Adiciona o card ao container de resultados
